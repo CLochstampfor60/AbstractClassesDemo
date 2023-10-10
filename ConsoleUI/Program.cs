@@ -15,6 +15,14 @@ namespace ConsoleUI
              */
 
             #region Vehicles
+            Vehicle v1;
+            Vehicle v2;
+            Vehicle v3;
+
+            var car1 = new Car();
+            var car2 = new Car();
+            var motorcycle1 = new Motorcycle();
+            var motorcycle2 = new Motorcycle();
 
             /*
              * Create an abstract class called Vehicle
