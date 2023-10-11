@@ -25,5 +25,11 @@ namespace ConsoleUI
         public bool HasSideCart { get; set; } 
 
         public bool HigherRisk { get; set; }
+
+        public override void PrintOtherInfo()
+        {
+            Console.WriteLine($"Has side card? {HasSideCart}");
+            Console.WriteLine($"Higher risk to drive? {HigherRisk}");
+        }
     }
 }

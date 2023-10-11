@@ -24,5 +24,10 @@ namespace ConsoleUI
         //Section 2
         public virtual int HowManyWheels { get; set; } = 0;
 
+        public virtual void PrintOtherInfo()
+        {
+            Console.WriteLine("Default PRINT OTHER INFO section.");
+        }
+
     }
 }

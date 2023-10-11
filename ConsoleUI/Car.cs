@@ -26,5 +26,11 @@ namespace ConsoleUI
         public int NumberOfSeatbelts { get; set; }
 
         public bool HasTrunk { get; set; }
+
+        public override void PrintOtherInfo()
+        {
+            Console.WriteLine($"How many seatbelts in the car? {NumberOfSeatbelts}");
+            Console.WriteLine($"Has a trunk? {HasTrunk}");
+        }
     }
 }

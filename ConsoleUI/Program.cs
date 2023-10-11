@@ -93,6 +93,7 @@ namespace ConsoleUI
                 Console.WriteLine($"Year: {vehicle.Year}");
                 Console.WriteLine($"Wheel Count: {vehicle.HowManyWheels}");
 
+                vehicle.PrintOtherInfo();
                 vehicle.DriveAbstract();
                 vehicle.DriveVirtual();
                 Console.WriteLine("---------------");
