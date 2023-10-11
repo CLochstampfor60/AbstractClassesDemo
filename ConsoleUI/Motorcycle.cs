@@ -15,7 +15,9 @@ namespace ConsoleUI
 
         public string Model { get; set; }
 
-        public override void DriveAbstract() {}
+        public override void DriveAbstract() {
+            Console.WriteLine("The motorcyle is driveable. It provides a unique and thrilling experience for the driver.");
+        }
 
         public override void DriveVirtual()
         {
@@ -26,7 +28,8 @@ namespace ConsoleUI
         //Section 2
         public override int HowManyWheels { get; set; }
 
-        public int HasSideCart { get; set; }
+        public bool HasSideCart { get; set; } 
+}
 
         public bool HigherRisk { get; set; }
     }

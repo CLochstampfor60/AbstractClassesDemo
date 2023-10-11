@@ -8,13 +8,17 @@ namespace ConsoleUI
 {
     internal class Car : Vehicle
     {
+        //Section 1
         public string Year { get; set; }
 
         public string Make { get; set; }
 
         public string Model { get; set; }
 
-        public override void DriveAbstract() { }
+        public override void DriveAbstract() 
+        {
+            Console.WriteLine("The car is driveable. It provides a smooth and safe experience for the driver.");
+        }
 
         public virtual void DriveVirtual()
         {
@@ -22,6 +26,7 @@ namespace ConsoleUI
            
         }
 
+        //Section 2
         public override int HowManyWheels { get; set; }
 
         public int NumberOfSeatbelts { get; set; }
