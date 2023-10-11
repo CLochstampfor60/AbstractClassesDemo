@@ -6,22 +6,25 @@ using System.Threading.Tasks;
 
 namespace ConsoleUI
 {
+    //Section 1
     internal abstract class Vehicle
     {
         public Vehicle() { }
 
-        public abstract int Year { get; set; }
-  
-       public abstract string Make { get; set; }
-  
-        public abstract string Model { get; set; }
+        public string Year { get; set; } = "Default Year";
 
-        public virtual int HowManyWheels {  get; set; }
+        public string Make { get; set; } = "Default Make";
+
+        public string Model { get; set; } = "Default Model";
 
         public abstract void DriveAbstract();
+
         public virtual void DriveVirtual() {
-            Console.WriteLine(DateTime.Now);
+            Console.WriteLine("Default VIRTUAL drive method.");
                 }
+
+        //Section 2
+        public virtual int HowManyWheels { get; set; }
 
     }
 }

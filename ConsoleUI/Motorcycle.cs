@@ -8,31 +8,26 @@ namespace ConsoleUI
 {
     internal class Motorcycle : Vehicle
     {
-//Abstracts of Vehicle
-        public override int Year { get; set; }
+        //Section 1
+        public string Year { get; set; }
 
-        public override string Make { get; set; }
+        public string Make { get; set; }
 
-        public override string Model { get; set; }
+        public string Model { get; set; }
 
-        public override int HowManyWheels { get; set; }
-
-//Unique to the Motorcycle class
-        public int HasSideCart { get; set; }
-
-        public string IsDangerous { get; set; }
-
- // Virtual methods shared between vehicles
-        public override void DriveAbstract()
-        {
-            /*throw new NotImplementedException();*/
-            Console.WriteLine("This is DriveAbstract");
-        }
+        public override void DriveAbstract() {}
 
         public override void DriveVirtual()
         {
-            /*base.DriveVirtual();*/
-           /* Console.WriteLine("This is DriveVirtual");*/
+
+            Console.WriteLine("This is the VIRTUAL MOTORCYCLE method.");
         }
+
+        //Section 2
+        public override int HowManyWheels { get; set; }
+
+        public int HasSideCart { get; set; }
+
+        public bool HigherRisk { get; set; }
     }
 }
