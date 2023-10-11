@@ -9,8 +9,6 @@ namespace ConsoleUI
     //Section 1
     internal abstract class Vehicle
     {
-        public Vehicle() { }
-
         public string Year { get; set; } = "Default Year";
 
         public string Make { get; set; } = "Default Make";
@@ -24,7 +22,7 @@ namespace ConsoleUI
                 }
 
         //Section 2
-        public virtual int HowManyWheels { get; set; }
+        public virtual int HowManyWheels { get; set; } = 0;
 
     }
 }

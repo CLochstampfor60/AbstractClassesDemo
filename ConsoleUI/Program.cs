@@ -39,30 +39,68 @@ namespace ConsoleUI
              * 
              * Set the properties with object initializer syntax
              */
-            var car1 = new Car() {
+            var car1 = new Car()
+            {
+                Make = "Pontiac",
+                Model = "Vibe",
+                Year = "2009",
                 HasTrunk = true,
                 NumberOfSeatbelts = 4,
                 HowManyWheels = 4,
             };
             var motorcycle1 = new Motorcycle
             {
-                HasSideCart = true,
+                Make = "Honda",
+                Model = "SCL500",
+                Year = "2023",
+                HasSideCart = false,
                 HigherRisk = true,
                 HowManyWheels = 2,
             };
-            Vehicle vehicle1 = new Car();
-            Vehicle vehicle2 = new Motorcycle();
-
-
+            Vehicle vehicle1 = new Car()
+            {
+                Make = "Honda",
+                Model = "Accord",
+                Year = "2023",
+                HasTrunk = true,
+                NumberOfSeatbelts = 4,
+                HowManyWheels = 4,
+            };
+            Vehicle vehicle2 = new Motorcycle()
+            {
+                Make = "Indian",
+                Model = "Chieftain Elite",
+                Year = "2023",
+                HasSideCart = false,
+                HigherRisk = true,
+                HowManyWheels = 2,
+            };
             /*
              * Add the 4 vehicles to the list
              * Using a foreach loop iterate over each of the properties
              */
 
+            vehicles.Add(car1);
+            vehicles.Add(motorcycle1);
+            vehicles.Add(vehicle1);
+            vehicles.Add(vehicle2);
+
             // Call each of the drive methods for one car and one motorcycle
+            foreach(var vehicle in vehicles)
+            {
+                Console.WriteLine($"Make: {vehicle.Make}");
+                Console.WriteLine($"Model: {vehicle.Model}");
+                Console.WriteLine($"Year: {vehicle.Year}");
+                Console.WriteLine($"Wheel Count: {vehicle.HowManyWheels}");
+
+                vehicle.DriveAbstract();
+                vehicle.DriveVirtual();
+                Console.WriteLine("---------------");
+                Console.WriteLine();
+            }
 
             #endregion            
-            Console.ReadLine();
+    
         }
     }
 }
